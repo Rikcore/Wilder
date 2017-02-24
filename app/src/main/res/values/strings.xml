@@ -3,4 +3,6 @@
     <string name="Welcome">Welcome to the Wild Code School!</string>
     <string name="wilder">Oui je souhaite devenir un wilder</string>
     <string name="Valider">Valider</string>
+    <string name="textefélicitations">Félicitations</string>
+
 </resources>
