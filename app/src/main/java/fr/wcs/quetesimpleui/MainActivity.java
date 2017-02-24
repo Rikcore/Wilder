@@ -63,11 +63,21 @@ public class MainActivity extends Activity  {
 
                 else if(editText1.getText().toString().equals("Pole") && editText2.getText().toString().equals("Emploi")){
 
-                félicitations.setText("Vous ne voulez pas plutôt aller à l'AFPA ?");
+                    Toast.makeText(MainActivity.this, "Vas plutôt à l'AFPA, sale NOOB !",
+                            Toast.LENGTH_LONG).show();
+                    félicitations.setVisibility(View.INVISIBLE);
                 }
-                else if(editText1.getText().toString().equals("Adolf") && editText2.getText().toString().equals("Hitler")){
+                else if(editText1.getText().toString().equals("Romain") && editText2.getText().toString().equals("Coeur")){
 
-                    félicitations.setText("NEIN NEIN NEIN NEIN !");
+                    Toast.makeText(MainActivity.this, "Tu dois finir le niveau 6 de France IOI avant de pouvoir postuler !",
+                            Toast.LENGTH_LONG).show();
+                    félicitations.setVisibility(View.INVISIBLE);
+                }
+                else if(editText1.getText().toString().equals("Edward") && editText2.getText().toString().equals("Marmounier")) {
+
+                    Toast.makeText(MainActivity.this, "Tu es déjà inscrit, mais peux-tu coder plus vite qu'un indien ?",
+                            Toast.LENGTH_LONG).show();
+                    félicitations.setVisibility(View.INVISIBLE);
                 }
 
                 else
