@@ -3,6 +3,9 @@
     <string name="Welcome">Welcome to the Wild Code School!</string>
     <string name="wilder">Oui je souhaite devenir un wilder</string>
     <string name="Valider">Valider</string>
-    <string name="textefélicitations">Félicitations</string>
+    <string name="textefélicitations">Félicitations </string>
+    <string name="renseigner">Tu dois renseigner ton nom et ton prénom !</string>
+    <string name="indien">Tu es déjà inscrit, mais peux-tu coder plus vite qu\'un indien ?</string>
+    <string name="Edward">Edward</string>
 
 </resources>

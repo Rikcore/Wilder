@@ -46,6 +46,12 @@ public class MainActivity extends Activity  {
                 editText1.setEnabled(ok.isChecked());
                 editText2.setEnabled(ok.isChecked());
                 Valider.setEnabled(ok.isChecked());
+                if (!(ok.isChecked())){
+                    félicitations.setVisibility(View.INVISIBLE);
+                    editText1.setText(null);
+                    editText2.setText(null);
+                }
+
 
             }
         });
@@ -53,29 +59,15 @@ public class MainActivity extends Activity  {
 
             public void onClick(View v)
             {
-                String success = ("Félicitations " + editText1.getText() + " " + editText2.getText());
+                String success = ( getString(R.string.textefélicitations) + " " + editText1.getText() + " " + editText2.getText());
 
                 if(editText1.length() == 0 || editText2.length() == 0 || editText1.getText().toString().equals("  ")) {
-                    Toast.makeText(MainActivity.this, "Tu dois renseigner le nom et le prénom !",
+                    Toast.makeText(MainActivity.this, getString(R.string.renseigner),
                             Toast.LENGTH_LONG).show();
                     félicitations.setVisibility(View.INVISIBLE);
                 }
-
-                else if(editText1.getText().toString().equals("Pole") && editText2.getText().toString().equals("Emploi")){
-
-                    Toast.makeText(MainActivity.this, "Vas plutôt à l'AFPA, sale NOOB !",
-                            Toast.LENGTH_LONG).show();
-                    félicitations.setVisibility(View.INVISIBLE);
-                }
-                else if(editText1.getText().toString().equals("Romain") && editText2.getText().toString().equals("Coeur")){
-
-                    Toast.makeText(MainActivity.this, "Tu dois finir le niveau 6 de France IOI avant de pouvoir postuler !",
-                            Toast.LENGTH_LONG).show();
-                    félicitations.setVisibility(View.INVISIBLE);
-                }
-                else if(editText1.getText().toString().equals("Edward") && editText2.getText().toString().equals("Marmounier")) {
-
-                    Toast.makeText(MainActivity.this, "Tu es déjà inscrit, mais peux-tu coder plus vite qu'un indien ?",
+                else if(editText1.getText().toString().equals(getString(R.string.Edward))) {
+                    Toast.makeText(MainActivity.this, getString(R.string.indien),
                             Toast.LENGTH_LONG).show();
                     félicitations.setVisibility(View.INVISIBLE);
                 }
@@ -84,8 +76,8 @@ public class MainActivity extends Activity  {
                 {
                     félicitations.setVisibility(View.VISIBLE);
                     félicitations.setText(success);
-
                 }
+
 
             }
         });
